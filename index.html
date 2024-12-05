@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus-X Slide In Text</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      overflow: hidden;
+    }
+
+    .slide-text {
+      font-family: 'Roboto', sans-serif;
+      font-size: 3rem; /* Smaller text size */
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slideIn 2s ease-out forwards;
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-text">Nexus-X</div>
+
+  <script>
+    // Redirect after 3 seconds
+    setTimeout(function() {
+      window.location.href = "https://www.example.com"; // Replace with your desired URL
+    }, 6000); // 3000ms = 3 seconds
+  </script>
+</body>
+</html>
